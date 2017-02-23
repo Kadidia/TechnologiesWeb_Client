@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1= title
+  h2 Liste des characters
+  //script(type='text/javascript', src='./js/main.js').
+  table(border="1" width="100%" height="100%")
+    thead
+      tr
+        th(bgcolor="#D3D3D3") Name
+        th(bgcolor="#D3D3D3") User
+        th(bgcolor="#D3D3D3") Class
+        th(bgcolor="#D3D3D3") Position
+        th(bgcolor="#D3D3D3") actions
+    tbody
+      for character in characters
+        tr
+          td(style="width:100px, height:100px") #{character.name}
+          td(style="width:100px, height:100px") #{character.user_id}
+          td(style="width:100px, height:100px") #{character.class}
+          td(style="width:100px, height:100px") (#{character.position.x}, #{character.position.y})
+          td
+           button.btn.btn-primary(type='submit', onclick='something('+ character.id +')') get details 
+
+    script.
+      function something(id) {
+        document.location.href="http://localhost:3001/characters/" + id
+      }
+    
+      
+

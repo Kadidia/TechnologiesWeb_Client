@@ -1,0 +1,29 @@
+extends layout
+
+block content
+  h1= title
+  h2 Liste des utilisateurs
+  //script(type='text/javascript', src='./js/main.js').
+  table(border="1" width="100%" height="100%")
+    thead
+      tr
+        th(bgcolor="#D3D3D3") Name
+        th(bgcolor="#D3D3D3") Email
+        th(bgcolor="#D3D3D3") Alliance
+        th(bgcolor="#D3D3D3") actions
+    tbody
+      for user in users
+        tr
+          td(style="width:100px, height:100px") #{user.name}
+          td(style="width:100px, height:100px") #{user.email}
+          td(style="width:100px, height:100px") #{user.alliance_id}
+          td
+           button.btn.btn-primary(type='submit', onclick='something('+ user.id +')') get details 
+
+    script.
+      function something(id) {
+        document.location.href="http://localhost:3001/users/" + id
+      }
+    
+      
+

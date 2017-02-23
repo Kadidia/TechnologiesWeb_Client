@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  h2 Alliance
+  table(border="1" width="100%" height="100%")
+    thead
+      tr
+        th(bgcolor="#D3D3D3") Id
+        th(bgcolor="#D3D3D3") Name
+    tbody
+        tr
+          td(style="width:100px, height:100px") #{alliance.id}
+          td(style="width:100px, height:100px") #{alliance.name}
+          
+    
+      
+

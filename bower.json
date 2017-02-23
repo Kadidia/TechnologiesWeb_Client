@@ -1,0 +1,22 @@
+{
+  "name": "client",
+  "description": "Pug-Sass Boilerplate Starter Kit is a Front-end web kit and boilerplate for building web apps or sites using Pug(Jade) and Sass",
+  "main": "gulpfile.js",
+  "authors": [
+    "lasscam <lasscam@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Errec/pug-sass-boilerplate-starter-kit",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "js/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "bootstrap": "^3.3.7"
+  }
+}
